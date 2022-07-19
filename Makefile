@@ -1,4 +1,4 @@
-PRJS = find_if init_list tuple
+PRJS = find_if init_list tuple unique_ptr
 
 all: ${PRJS}
 
@@ -10,6 +10,9 @@ init_list: init_list.cc
 
 tuple: tuple.cc
 	g++ -std=c++17 -o $@ $^
+
+unique_ptr: unique_ptr.cc
+	g++ -o $@ $^
 
 clean:
 	rm -f ${PRJS}
