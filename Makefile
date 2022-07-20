@@ -1,4 +1,4 @@
-PRJS = find_if init_list tuple unique_ptr
+PRJS = find_if init_list tuple unique_ptr weak_ptr
 
 all: ${PRJS}
 
@@ -12,6 +12,9 @@ tuple: tuple.cc
 	g++ -std=c++17 -o $@ $^
 
 unique_ptr: unique_ptr.cc
+	g++ -o $@ $^
+
+weak_ptr: weak_ptr.cc
 	g++ -o $@ $^
 
 clean:
